@@ -1,20 +1,49 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <ion-menu side="start" menuId="first" contentId="main">
+    <ion-header>
+      <ion-toolbar color="warning">
+        <ion-title >Menú</ion-title>
+      </ion-toolbar>
+    </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <ion-chip>
+      <ion-avatar>
+        <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+      </ion-avatar>
+      <ion-label>Bienvenido: {{dato}}</ion-label>
+    </ion-chip>
+
+    <ion-content>
+      <ion-list>
+        <ion-item detail="true">Perfil</ion-item>
+        <ion-item detail="true">Contacto</ion-item>
+        <ion-item detail="true">Ayuda</ion-item>
+        <ion-item detail="true" [routerLink]="['/login']">Logout</ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <ion-router-outlet id="main"></ion-router-outlet>
+
+  <div class="ion-page" id="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-menu-button color="warning"></ion-menu-button>
+        </ion-buttons>
+        <ion-title>DUOC UC</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <mat-tab-group>
+        <mat-tab label="Escanear QR"> <img src="https://www.ionos.es/digitalguide/fileadmin/DigitalGuide/Screenshots_2020/qr-code-beispiel.png"> </mat-tab>
+        <mat-tab label="Asistencias"> Content 2 </mat-tab>
+      </mat-tab-group>
+    </ion-content>
   </div>
+  
+
+  
+  
 </ion-content>

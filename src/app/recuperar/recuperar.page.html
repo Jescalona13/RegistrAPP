@@ -1,0 +1,39 @@
+<ion-header>
+</ion-header>
+
+<ion-content fullscreen>
+  <div class="ion-padding-vertical">
+    <ion-card class="ion-text-center">
+      <ion-card-title>
+        <h1>RegistrAPP</h1>  
+      </ion-card-title>
+
+
+      
+
+      <img src="assets/Imagenes/Logo_3.jpg">
+
+      <ion-card-subtitle>
+        <ion-label>Ingrese su Usuario y presione Recuperar</ion-label>
+      </ion-card-subtitle>
+
+      <ion-card-content>
+
+        <ion-item>
+          <ion-label color="warning" position="stacked">Usuario</ion-label>
+          <ion-input type="text" minlength="3" [(ngModel)]="dato"></ion-input>
+        </ion-item> 
+
+
+    
+        <ion-col>
+          <ion-button color="warning" expand="full" (click)="cargaRecuperar()">Recuperar</ion-button>
+        
+        </ion-col>
+
+        <mat-progress-spinner mode="indeterminate" color="accent" *ngIf="showSpinner"></mat-progress-spinner>
+
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
